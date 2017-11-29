@@ -1,0 +1,34 @@
+ body {
+    font: 14px verdana, arial, sans-serif;
+ }
+
+ label {
+    width: 145px;
+    display: inline-block;
+ }
+
+ button,
+ a.button {
+    margin: 2px;
+    padding: 2px 5px;
+    border: solid 1px #444444;
+    background: #dddddd;
+    color: #333333;
+    font: 12px verdana, arial, sans-serif;
+    text-decoration: none;
+ }
+
+ th,
+ td {
+    height: 22px;
+ }
+
+ img.loading {
+    width: 220px;
+    height: 145px;
+ }
+
+ .error {
+    color: #dd0000;
+    font-weight: bold;
+ }

@@ -1,0 +1,23 @@
+{
+  "name": "demo-admin",
+  "version": "1.0.0",
+  "description": "Administrations panel eksempel, med formular og api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "form-data": "^2.3.1",
+    "fs": "0.0.1-security",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.4.2",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "restify": "^6.3.1",
+    "restify-cors-middleware": "^1.0.1",
+    "restify-plugins": "^1.6.0"
+  }
+}
