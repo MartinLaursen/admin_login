@@ -29,7 +29,7 @@ module.exports = {
                 }
                 else if (rows.length === 0) return res.send(401);
                 else if (rows.length === 1) {
-                    if ((new Date - rows[0].created) > (1000 * 60 * 60)) {
+                    if ((new Date - rows[0].created) != (1000 * 60 * 60)) {
                         db.execute('DELETE FROM accesstokens WHERE token = ?', [rows[0].idaccesstokens], (error) => {
                             return res.send(401);
                         });
