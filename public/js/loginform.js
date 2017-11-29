@@ -8,7 +8,7 @@
                 'password': form.password.value
             });
 
-            fetch('http://localhost:3030/login', {
+            fetch('http://188.166.38.75:3030/login', {
                 'method': 'POST',
                 'headers': {
                     'Accept': 'application/json',

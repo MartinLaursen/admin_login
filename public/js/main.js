@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", event => {
       if (getParameterByName('action') == "edit") {
             let productId = (getParameterByName('id') != null ? getParameterByName('id') : 0);
 
-            fetch(`http://localhost:3030/products/${productId}`)
+            fetch(`http://188.166.38.75:3030/products/${productId}`)
                   .then((response) => {
                         if (response.ok) {
                               return response.json();
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", event => {
                               if (id != 0 && name != '' && description != '' && price != '') {
 
                                     document.querySelector('#productsFormError').innerHTML = "";
-                                    let url = `http://localhost:3030/products/${id}`;
+                                    let url = `http://188.166.38.75:3030/products/${id}`;
                                     let headers = new Headers();
                                     headers.append('Content-Type', 'application/json');
                                     price = price.replace(',', '.');
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
                   if (name != '' && description != '' && price != '') {
                         document.querySelector('#productsFormError').innerHTML = "";
-                        let url = `http://localhost:3030/products/`;
+                        let url = `http://188.166.38.75:3030/products/`;
                         price = price.replace(',', '.');
                         let init = {
                               method: 'post',
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", event => {
             });
       }
 
-      fetch('http://localhost:3030/products')
+      fetch('http://188.166.38.75:3030/products')
             .then((response) => {
                   if (response.ok) {
                         return response.json();
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", event => {
                   for (let j = 0; j < deleteButtons.length; j++) {
                         deleteButtons[j].addEventListener('click', (event) => {
                               let id = deleteButtons[j].dataset['id'];
-                              let url = `http://localhost:3030/products/${id}`;
+                              let url = `http://188.166.38.75:3030/products/${id}`;
                               let headers = new Headers();
                               headers.append('Content-Type', 'application/json');
 

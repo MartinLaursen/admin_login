@@ -7,7 +7,7 @@
                 'file': form.filetoupload.value
             });
             console.log("test 1");
-            fetch('http://localhost:3030/upload', {
+            fetch('http://188.166.38.75:3030/upload', {
                 'method': 'POST',
                 'headers': {
                     'Accept': 'application/json',
