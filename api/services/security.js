@@ -14,7 +14,7 @@ module.exports = {
      * @param {function} next - callback function
      */
     'isAuthenticated': (req, res, next) => {
-        // return next();
+        return next();
         console.log(req.header('Authorization'));
         if (req.header('Authorization') && req.header('userID')) {
             const query = `SELECT token, created
@@ -29,8 +29,7 @@ module.exports = {
                 }
                 else if (rows.length === 0) return res.send(401);
                 else if (rows.length === 1) {
-                    //if ((new Date - rows[0].created) < (1000 * 60 * 60)) {
-                    if (false) {
+                    if ((new Date - rows[0].created) < (1000 * 60 * 60)) {
                         db.execute('DELETE FROM accesstokens WHERE token = ?', [rows[0].idaccesstokens], (error) => {
                             return res.send(401);
                         });
